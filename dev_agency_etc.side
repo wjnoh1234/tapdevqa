@@ -1,7 +1,7 @@
 {
   "id": "31086fdd-c601-4af7-b0c2-3595cc71e650",
   "version": "2.0",
-  "name": "dev_account",
+  "name": "dev_agency_etc",
   "url": "https://dev-tapcert.pion.co.kr",
   "tests": [{
     "id": "3963642a-e487-49fe-a1e7-e3ba0b63a9b2",
@@ -714,10 +714,17 @@
       ],
       "value": ""
     }, {
+      "id": "326b28bd-c8d5-43b0-adc6-17c7cc442edf",
+      "comment": "",
+      "command": "store",
+      "target": "xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div[2]/div/div[1]",
+      "targets": [],
+      "value": "i"
+    }, {
       "id": "59940ff5-b08e-469f-b9a3-c695c8fd1cb7",
       "comment": "",
       "command": "click",
-      "target": "xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div[2]/div/div[8]",
+      "target": "xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div[2]/div/div[1]",
       "targets": [
         ["id=react-select-2-option-8", "id"],
         ["css=#react-select-2-option-8", "css:finder"],
@@ -740,14 +747,14 @@
     }, {
       "id": "9a50cc4f-c394-4bbd-9a01-981e465c8cab",
       "comment": "",
-      "command": "verifyText",
-      "target": "css=.pc-select__single-value",
+      "command": "verifyValue",
+      "target": "css=.ag-cell-focus > .ag-react-container ==storedVars['i']",
       "targets": [
-        ["css=.pc-select__single-value", "css:finder"],
-        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div/div", "xpath:idRelative"],
-        ["xpath=//div/div/div/div/div", "xpath:position"]
+        ["css=.ag-cell-focus > .ag-react-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[4]/div", "xpath:position"]
       ],
-      "value": "삼성 이건희(거니짱)"
+      "value": "ture"
     }]
   }],
   "suites": [{
