@@ -267,7 +267,7 @@
       "id": "937fdc7b-d214-46bf-9a1c-a3eb4671bfa8",
       "comment": "",
       "command": "click",
-      "target": "linkText=Tiktok Agency Platform",
+      "target": "css=.service-logo",
       "targets": [
         ["linkText=Tiktok Agency Platform", "linkText"],
         ["css=.service-logo", "css:finder"],
@@ -433,7 +433,7 @@
       "id": "4a6786a9-db62-4128-b3b3-70c42e23ea4f",
       "comment": "",
       "command": "click",
-      "target": "linkText=Tiktok Agency Platform",
+      "target": "css=.service-logo",
       "targets": [
         ["linkText=Tiktok Agency Platform", "linkText"],
         ["css=.service-logo", "css:finder"],
