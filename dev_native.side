@@ -156,7 +156,7 @@
         ["xpath=//div[@id='booking-sidebar']/div/fieldset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
         ["xpath=//dd/div/div/div/input", "xpath:position"]
       ],
-      "value": "autotest(최대속도)"
+      "value": "Autotest(native only)"
     }, {
       "id": "a1fc4188-79bf-4a8e-8cf7-37f82268bc18",
       "comment": "",
@@ -1721,25 +1721,26 @@
       ],
       "value": ""
     }, {
-      "id": "b7c2ce73-5c9d-4fe7-95a1-4a8a22c61d71",
+      "id": "4c94e66b-347b-4cb5-b581-efce84bc1420",
       "comment": "",
-      "command": "click",
-      "target": "css=.container:nth-child(2)",
+      "command": "waitForElementPresent",
+      "target": "xpath=//span[contains(.,'검수요청중')]",
       "targets": [
-        ["css=.container:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='tap-root']/div/div[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+        ["css=.ag-cell-focus .title", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'검수요청중')]", "xpath:innerText"]
       ],
-      "value": ""
+      "value": "10000"
     }, {
       "id": "2a78cc2c-61ca-4892-8ffb-c5c9be0a549a",
       "comment": "",
       "command": "mouseOver",
-      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]",
       "targets": [
         ["css=.ag-cell-focus", "css:finder"],
-        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/div/div[4]", "xpath:position"]
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/div/div[3]", "xpath:position"]
       ],
       "value": ""
     }, {

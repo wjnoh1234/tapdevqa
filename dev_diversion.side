@@ -87,6 +87,20 @@
         ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "e223f7e8-fe3e-4924-9931-3d052eec1ef5",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
     }]
   }, {
     "id": "83436604-80dd-4261-9937-8ff03e48bba6",
@@ -142,7 +156,7 @@
         ["xpath=//div[@id='booking-sidebar']/div/fieldset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
         ["xpath=//dd/div/div/div/input", "xpath:position"]
       ],
-      "value": "autotest1"
+      "value": "Autotest(diversion only)"
     }, {
       "id": "a1fc4188-79bf-4a8e-8cf7-37f82268bc18",
       "comment": "",
@@ -228,7 +242,7 @@
         ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div[2]/div/dd/div/div/div/label/input", "xpath:idRelative"],
         ["xpath=//label/input", "xpath:position"]
       ],
-      "value": "/Users/pion/Desktop/tiktok_test.jpg"
+      "value": "/Users/pion/Desktop/TAP dev QA/tiktok_test.jpg"
     }, {
       "id": "dfe85873-30c2-4e27-b886-204ec83774f0",
       "comment": "",
@@ -498,7 +512,7 @@
       "command": "type",
       "target": "id=pfile-1",
       "targets": [],
-      "value": "/Users/pion/Desktop/test_video.mp4"
+      "value": "/Users/pion/Desktop/TAP dev QA/test_video.mp4"
     }, {
       "id": "a1ba5395-a409-4c75-b3a9-cc2fab1ca2bb",
       "comment": "",
@@ -858,6 +872,20 @@
         ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "7578f4c7-1b19-4c18-9941-fa05c51e5c66",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
     }]
   }, {
     "id": "15113385-4b4c-4719-b2cc-976c6285aff4",
@@ -989,6 +1017,20 @@
         ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "430070bf-55b0-4700-8a1a-e10e543a1a0b",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
     }]
   }, {
     "id": "6982b3b9-0bfb-41e5-ac0a-e4df2fba4ab0",
@@ -1189,6 +1231,20 @@
         ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "1c37877f-30bb-48d2-8614-8d695066c26e",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
     }]
   }, {
     "id": "79be6b43-a910-4aa7-8b27-318ddb4e0bc3",
@@ -1398,6 +1454,20 @@
         ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "12c79754-97ac-4c38-b770-3e9fe0b928d0",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
     }]
   }, {
     "id": "dd7d6b53-312d-4cfa-9ed5-dff30c9f96a3",
@@ -1625,6 +1695,20 @@
         ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "29737f17-0d6c-4015-b960-b302b200ca4c",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
     }]
   }, {
     "id": "de85161f-0236-4794-afde-f038f2f2a029",
@@ -1655,25 +1739,26 @@
       ],
       "value": ""
     }, {
-      "id": "b7c2ce73-5c9d-4fe7-95a1-4a8a22c61d71",
+      "id": "e0c6ae38-7019-4ec3-bbe2-fe595389c8c5",
       "comment": "",
-      "command": "click",
-      "target": "css=.container:nth-child(2)",
+      "command": "waitForElementPresent",
+      "target": "xpath=//span[contains(.,'검수요청중')]",
       "targets": [
-        ["css=.container:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='tap-root']/div/div[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+        ["css=.ag-cell-focus .title", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[4]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'검수요청중')]", "xpath:innerText"]
       ],
-      "value": ""
+      "value": "10000"
     }, {
       "id": "2a78cc2c-61ca-4892-8ffb-c5c9be0a549a",
       "comment": "",
       "command": "mouseOver",
-      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]",
+      "target": "xpath=//div[3]/div[2]/div/div/div/div[3]",
       "targets": [
         ["css=.ag-cell-focus", "css:finder"],
-        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/div/div[3]", "xpath:position"]
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/div/div[4]", "xpath:position"]
       ],
       "value": ""
     }, {
@@ -1858,6 +1943,20 @@
         ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "4b7939d5-7ca8-4a4d-a2ca-33dacd403e5c",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
     }]
   }],
   "suites": [{
