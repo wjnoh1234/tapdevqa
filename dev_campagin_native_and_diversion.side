@@ -224,7 +224,7 @@
         ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
         ["xpath=//div/dl/div/div/dd/div/div/div/input", "xpath:position"]
       ],
-      "value": "11₩11"
+      "value": "틱톡 아이디"
     }, {
       "id": "dfe85873-30c2-4e27-b886-204ec83774f0",
       "comment": "",
@@ -570,7 +570,7 @@
       "id": "99f1bb09-6ea3-419f-8ede-d9b06effb6cc",
       "comment": "",
       "command": "click",
-      "target": "css=li:nth-child(1) > label",
+      "target": "xpath=//label[contains(.,'다운로드')]",
       "targets": [
         ["css=li:nth-child(1) > label", "css:finder"],
         ["xpath=//div[@id='booking-ad-cta']/div[2]/ul/div/ul/li/label", "xpath:idRelative"],
@@ -579,26 +579,104 @@
       ],
       "value": ""
     }, {
-      "id": "62cd0134-c2a0-49c6-82cd-da2a240df908",
+      "id": "84ffbe92-5f0a-42ae-93a1-8019c82fb79b",
       "comment": "",
       "command": "click",
-      "target": "css=li:nth-child(2) > label",
+      "target": "linkText=광고그룹#2",
       "targets": [
-        ["css=li:nth-child(2) > label", "css:finder"],
-        ["xpath=//div[@id='booking-ad-cta']/div[2]/ul/div/ul/li[2]/label", "xpath:idRelative"],
-        ["xpath=//li[2]/label", "xpath:position"],
-        ["xpath=//label[contains(.,'지금신청')]", "xpath:innerText"]
+        ["linkText=광고그룹#2", "linkText"],
+        ["css=li:nth-child(2) > .menu", "css:finder"],
+        ["xpath=//a[contains(text(),'광고그룹#2')]", "xpath:link"],
+        ["xpath=//div[@id='booking-sidebar']/nav/ol/li[2]/a", "xpath:idRelative"],
+        ["xpath=//ol/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'광고그룹#2')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "d90008b8-9ade-4af8-b92f-7f13c3f0e2d1",
+      "id": "6c96d650-ad43-4e52-8c99-8b501cd379db",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//h2[contains(.,'광고그룹#2')]",
+      "targets": [
+        ["css=.container-title", "css:finder"],
+        ["xpath=//div[@id='booking-adgroup-product']/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'광고그룹#2')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "8a0b92bd-06df-4bc6-ac68-53d24411ad2e",
+      "comment": "",
+      "command": "type",
+      "target": "name=adgroups[1].adgroup.webUrl",
+      "targets": [
+        ["name=adgroups[1].adgroup.webUrl", "name"],
+        ["css=#booking-adgroup-detail .form-row:nth-child(2) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[1].adgroup.webUrl']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-detail']/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/dl/div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "http://www.naver.com"
+    }, {
+      "id": "99bbc534-27f3-4ec4-b592-a70f137b8ce5",
+      "comment": "",
+      "command": "type",
+      "target": "name=adgroups[1].adgroup.tiktokUrl",
+      "targets": [
+        ["name=adgroups[1].adgroup.tiktokUrl", "name"],
+        ["css=#booking-adgroup-detail .form-row:nth-child(3) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[1].adgroup.tiktokUrl']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-detail']/dl/div[3]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/dl/div[3]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "http://www.naver.com"
+    }, {
+      "id": "16e42430-85ab-416d-b02f-2bc8bcee18f2",
       "comment": "",
       "command": "click",
-      "target": "css=#booking-ad-cta > dd",
+      "target": "css=.upload-area",
       "targets": [
-        ["css=#booking-ad-cta > dd", "css:finder"],
-        ["xpath=//div[@id='booking-ad-cta']/dd", "xpath:idRelative"],
-        ["xpath=//div[2]/div/fieldset/dl/div[5]/div/dd", "xpath:position"]
+        ["css=.upload-area", "css:finder"],
+        ["xpath=//div[@id='booking-ad-video']/dd/div/div/div/div/div/label", "xpath:idRelative"],
+        ["xpath=//dd/div/div/div/div/div/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63948440-95c9-4e4d-b2cc-6896fb2c1c73",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//div[@id='booking-ad-video']/dd/div/div/div/div/div/label/input",
+      "targets": [
+        ["id=pfile-3", "id"],
+        ["css=#pfile-3", "css:finder"],
+        ["xpath=//input[@id='pfile-3']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-ad-video']/dd/div/div/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "/Users/pion/Desktop/TAP dev QA/test_video.mp4"
+    }, {
+      "id": "48bd3bc2-49f7-4dd7-83c4-f8d1b54cdfa3",
+      "comment": "",
+      "command": "type",
+      "target": "name=adgroups[1].adgroupads[0].caption",
+      "targets": [
+        ["name=adgroups[1].adgroupads[0].caption", "name"],
+        ["css=#booking-ad-caption .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[1].adgroupads[0].caption']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-ad-caption']/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/fieldset/dl/div[3]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "http://www.naver.com"
+    }, {
+      "id": "e5a4ca8f-2b77-459a-ad3d-21464b3bc943",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(20) .txt",
+      "targets": [
+        ["css=li:nth-child(20) .txt", "css:finder"],
+        ["xpath=//div[@id='booking-ad-cta']/div[2]/ul/div/ul/li[20]/label/span", "xpath:idRelative"],
+        ["xpath=//li[20]/label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'지금사전주문')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
@@ -614,6 +692,18 @@
         ["xpath=//button[contains(.,'임시저장')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "78183b83-27a4-4e06-9142-bd0cd31a05fb",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=.pc-modal-header-title",
+      "targets": [
+        ["css=.pc-modal-header-title", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'그룹 디테일 및 소재')]", "xpath:innerText"]
+      ],
+      "value": "30000"
     }]
   }, {
     "id": "5bb2f0b3-4651-4d3a-abe9-7df4dad1b3c3",
