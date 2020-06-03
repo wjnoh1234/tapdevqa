@@ -701,60 +701,73 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "f6374369-4213-4afc-8f65-ed9cd151dc98",
+      "id": "b45126ef-0e3e-49a4-abcf-1f02d7e38d10",
       "comment": "",
       "command": "click",
-      "target": "id=react-select-2-input",
+      "target": "css=.pc-select__indicator",
       "targets": [
-        ["id=react-select-2-input", "id"],
-        ["css=#react-select-2-input", "css:finder"],
-        ["xpath=//input[@id='react-select-2-input']", "xpath:attributes"],
-        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["css=.pc-select__indicator", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//fieldset/div/div/div/div[2]/div", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "326b28bd-c8d5-43b0-adc6-17c7cc442edf",
+      "id": "a0f5af71-97bf-42d7-8a94-85c54b72ceef",
       "comment": "",
-      "command": "store",
-      "target": "xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div[2]/div/div[1]",
+      "command": "click",
+      "target": "id=react-select-2-option-0",
       "targets": [],
+      "value": ""
+    }, {
+      "id": "b40eb43a-d0c5-41c1-a15b-32836954af96",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.pc-select__single-value",
+      "targets": [
+        ["css=.pc-select__single-value", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div", "xpath:position"]
+      ],
       "value": "i"
     }, {
-      "id": "59940ff5-b08e-469f-b9a3-c695c8fd1cb7",
+      "id": "1ae5aa8d-6978-4063-a5d5-4906a5acbe64",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div[2]/div/div[1]",
-      "targets": [
-        ["id=react-select-2-option-8", "id"],
-        ["css=#react-select-2-option-8", "css:finder"],
-        ["xpath=//div[@id='react-select-2-option-8']", "xpath:attributes"],
-        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div[2]/div/div[9]", "xpath:idRelative"],
-        ["xpath=//div[9]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c59d4dce-5485-427d-b3f0-c1758631a395",
-      "comment": "",
-      "command": "mouseUp",
-      "target": "css=.pc-select__value-container",
-      "targets": [
-        ["css=.pc-select__value-container", "css:finder"],
-        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div", "xpath:idRelative"],
-        ["xpath=//fieldset/div/div/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "9a50cc4f-c394-4bbd-9a01-981e465c8cab",
-      "comment": "",
-      "command": "verifyValue",
-      "target": "css=.ag-cell-focus > .ag-react-container ==storedVars['i']",
+      "command": "storeText",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]/div",
       "targets": [
         ["css=.ag-cell-focus > .ag-react-container", "css:finder"],
         ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]/div", "xpath:idRelative"],
         ["xpath=//div[2]/div/div/div/div[4]/div", "xpath:position"]
       ],
-      "value": "ture"
+      "value": "j"
+    }, {
+      "id": "732d6b5f-dbbc-4aa8-987e-5f4feac9acd1",
+      "comment": "",
+      "command": "echo",
+      "target": "${i}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "968094b9-cb71-4c21-851e-211be4c2669c",
+      "comment": "",
+      "command": "echo",
+      "target": "${j}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b495f128-da72-4654-9022-2f1748de3aab",
+      "comment": "",
+      "command": "if",
+      "target": "${i} = ${j}",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "23e37817-75af-4a24-a808-5f6f6d08ee97",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }],
   "suites": [{
