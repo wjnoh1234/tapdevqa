@@ -274,7 +274,7 @@
         ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div[2]/div/dd/div/div/div/label/input", "xpath:idRelative"],
         ["xpath=//label/input", "xpath:position"]
       ],
-      "value": "/Users/pion/Desktop/TAP dev QA/tiktok_test.jpg"
+      "value": "/Users/pion/Desktop/TAPdevQA/tiktok_test.jpg"
     }, {
       "id": "13eff973-a69d-4eb5-a8ef-5e52c3874b07",
       "comment": "요청메시지 입력",
@@ -653,7 +653,7 @@
         ["xpath=//div[@id='booking-ad-video']/dd/div/div/div/div/div/label/input", "xpath:idRelative"],
         ["xpath=//label/input", "xpath:position"]
       ],
-      "value": "/Users/pion/Desktop/TAP dev QA/test_video.mp4"
+      "value": "/Users/pion/Desktop/TAPdevQA/test_video.mp4"
     }, {
       "id": "48bd3bc2-49f7-4dd7-83c4-f8d1b54cdfa3",
       "comment": "",
