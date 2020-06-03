@@ -242,7 +242,7 @@
         ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div[2]/div/dd/div/div/div/label/input", "xpath:idRelative"],
         ["xpath=//label/input", "xpath:position"]
       ],
-      "value": "/Users/pion/Desktop/TAP dev QA/tiktok_test.jpg"
+      "value": "/Users/pion/Desktop/TAPdevQA/tiktok_test.jpg"
     }, {
       "id": "dfe85873-30c2-4e27-b886-204ec83774f0",
       "comment": "",
@@ -512,7 +512,7 @@
       "command": "type",
       "target": "id=pfile-1",
       "targets": [],
-      "value": "/Users/pion/Desktop/TAP dev QA/test_video.mp4"
+      "value": "/Users/pion/Desktop/TAPdevQA/test_video.mp4"
     }, {
       "id": "a1ba5395-a409-4c75-b3a9-cc2fab1ca2bb",
       "comment": "",
