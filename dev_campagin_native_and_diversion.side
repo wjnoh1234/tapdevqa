@@ -1,0 +1,1967 @@
+{
+  "id": "31086fdd-c601-4af7-b0c2-3595cc71e650",
+  "version": "2.0",
+  "name": "dev_campagin_native_and_diversion",
+  "url": "https://dev-tapcert.pion.co.kr",
+  "tests": [{
+    "id": "3963642a-e487-49fe-a1e7-e3ba0b63a9b2",
+    "name": "1.login(에이전시)",
+    "commands": [{
+      "id": "46d29f30-5c45-4a53-8e35-79ccf3e11b8a",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82bfca16-b5b9-4b26-8549-c8f838ebc0fe",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "666cbef3-0a09-4569-9f4d-2996f4c842da",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92e474aa-0027-46a5-9aef-7b7013e4baff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "490d6d03-7d55-49b2-922c-0d325167d8b8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "nohwoojoo@naver.com"
+    }, {
+      "id": "5d703b1a-987b-4b1c-ae91-2be6000a831f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "c46cef88-f111-4684-bd07-4f869400dda8",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSignin",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91782bd0-582e-4e5d-9bcf-eb65b868e537",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "83436604-80dd-4261-9937-8ff03e48bba6",
+    "name": "2.새로운 캠페인 임시저장(native)",
+    "commands": [{
+      "id": "422f707d-9f80-46d8-b43b-6c8402cc56af",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2001209-60d0-4561-abeb-f3f185f46ba3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98af763a-52b8-4a92-a94b-137848e587c3",
+      "comment": "새로운 캠페인 버튼이 등장할때까지 기다리기",
+      "command": "waitForElementVisible",
+      "target": "css=.pc-buttons",
+      "targets": [
+        ["css=.pc-buttons", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+ 새로운 캠페인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "061bdf50-cd80-4a71-a492-b89c1f271d01",
+      "comment": "캠페인 생성버튼 클릭",
+      "command": "click",
+      "target": "css=.btn-label",
+      "targets": [
+        ["css=.btn-label", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'+ 새로운 캠페인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "020240a2-2eac-4249-9267-f705eaa83f44",
+      "comment": "native와 diversion 그룹을 가지는 캠페인 생성",
+      "command": "type",
+      "target": "name=campaignName",
+      "targets": [
+        ["name=campaignName", "name"],
+        ["css=.container-box > .form-booking .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='campaignName']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Autotest(native+diversion)"
+    }, {
+      "id": "a1fc4188-79bf-4a8e-8cf7-37f82268bc18",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='booking-sidebar']/div/fieldset/dl/div[2]/div/dd/div/div/div/div/div/div[2]/div",
+      "targets": [
+        ["css=.css-1gtu0rj-indicatorContainer", "css:finder"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset/dl/div[2]/div/dd/div/div/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//dd/div/div/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57445819-fd04-47a7-b8ad-0d1f55838efc",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-3-option-1",
+      "targets": [
+        ["id=react-select-3-option-1", "id"],
+        ["css=#react-select-3-option-1", "css:finder"],
+        ["xpath=//div[@id='react-select-3-option-1']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset/dl/div[2]/div/dd/div/div/div/div/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//dd/div/div/div/div/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "740e8094-443e-4eef-a569-1b65d5235d44",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container-box > .form-booking > .form-row:nth-child(4)",
+      "targets": [
+        ["css=.container-box > .form-booking > .form-row:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset/dl/div[4]", "xpath:idRelative"],
+        ["xpath=//dl/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2718db88-2d2e-4152-a160-27f9241d924f",
+      "comment": "",
+      "command": "click",
+      "target": "name=adgroups[0].tiktokAccountUid",
+      "targets": [
+        ["name=adgroups[0].tiktokAccountUid", "name"],
+        ["css=.pc-form-container:nth-child(1) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].tiktokAccountUid']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/dl/div/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b194e461-09ef-45fb-af66-dc19411a945d",
+      "comment": "",
+      "command": "type",
+      "target": "name=adgroups[0].tiktokAccountUid",
+      "targets": [
+        ["name=adgroups[0].tiktokAccountUid", "name"],
+        ["css=.pc-form-container:nth-child(1) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].tiktokAccountUid']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/dl/div/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "11₩11"
+    }, {
+      "id": "dfe85873-30c2-4e27-b886-204ec83774f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#booking-adgroup-period .form-row:nth-child(1) dd",
+      "targets": [
+        ["css=#booking-adgroup-period .form-row:nth-child(1) dd", "css:finder"],
+        ["xpath=//fieldset[@id='booking-adgroup-period']/dl/div/div/dd", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/dl/div/div/dd", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24ef960a-6fe1-49e4-8a40-35e3df44008f",
+      "comment": "",
+      "command": "click",
+      "target": "name=bookingComment.comment",
+      "targets": [
+        ["name=bookingComment.comment", "name"],
+        ["css=.pc-text-area", "css:finder"],
+        ["xpath=//textarea[@name='bookingComment.comment']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset[3]/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13eff973-a69d-4eb5-a8ef-5e52c3874b07",
+      "comment": "",
+      "command": "type",
+      "target": "name=bookingComment.comment",
+      "targets": [
+        ["name=bookingComment.comment", "name"],
+        ["css=.pc-text-area", "css:finder"],
+        ["xpath=//textarea[@name='bookingComment.comment']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset[3]/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "111"
+    }, {
+      "id": "103c0797-1371-4469-a4c2-b58d9c66163e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-row:nth-child(5) > .content",
+      "targets": [
+        ["css=.form-row:nth-child(5) > .content", "css:finder"],
+        ["xpath=//fieldset[@id='booking-adgroup-period']/dl/div[5]/div", "xpath:idRelative"],
+        ["xpath=//dl/div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38ed4f20-5b78-43c3-ad15-e771365f4813",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flex-item:nth-child(2) > .pc-buttons:nth-child(1) > .btn-label",
+      "targets": [
+        ["css=.flex-item:nth-child(2) > .pc-buttons:nth-child(1) > .btn-label", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div[3]/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//aside/div/div/div[3]/div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e926ff6c-50c6-4ba8-8678-8b53f7492ad4",
+    "name": "3.임시저장 후 검수요청",
+    "commands": [{
+      "id": "9bd5cd1a-cf0f-4245-be94-bda409f64a81",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc645678-98a8-42f9-8499-0df24aa66b2b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20ecbac6-08c0-4c31-8871-032ea109ae37",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(.,'✓ 캠페인 및 그룹 정보를 검수 요청하세요.')]",
+      "targets": [
+        ["css=.ag-cell-focus .guide > span", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'✓ 캠페인 및 그룹 정보를 검수 요청하세요.')]", "xpath:innerText"]
+      ],
+      "value": "20000"
+    }, {
+      "id": "587a1534-a0b3-41d5-8a0e-20eedea7eead",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=검수 요청",
+      "targets": [
+        ["linkText=검수 요청", "linkText"],
+        ["css=.ag-cell-focus .link", "css:finder"],
+        ["xpath=//a[contains(text(),'검수 요청')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div/div/div/p/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '')])[6]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'검수 요청')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59513e5e-9936-442b-9554-66d8e39d428f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'검수요청')]",
+      "targets": [
+        ["css=.flex-item > .pc-buttons:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[82]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div[3]/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'검수요청')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6facdfcb-d378-439f-add6-11feaf970a7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pc-modal",
+      "targets": [
+        ["css=.pc-modal", "css:finder"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div", "xpath:idRelative"],
+        ["xpath=//aside/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7941e92-0629-4f86-96cc-01667ac39ac5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[3]/div/button",
+      "targets": [
+        ["css=.flex-item > .pc-buttons:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='button'])[72]", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'닫기')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8674a51c-664c-4fbc-9536-01bdf577029c",
+    "name": "4.캠페인 검수 요청 후 소재 작성",
+    "commands": [{
+      "id": "4fef5513-fe45-40c0-b38d-74e948941309",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c29bfabc-77cc-45a9-a74a-e1a5559e278d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "742729ad-5aa0-4d8f-88a5-7390fb768e26",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(.,'✓ 미리 그룹 디테일 및 소재 작성을 시작하세요.')]",
+      "targets": [
+        ["css=.ag-cell-focus .guide > span", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'✓ 미리 그룹 디테일 및 소재 작성을 시작하세요.')]", "xpath:innerText"]
+      ],
+      "value": "20000"
+    }, {
+      "id": "75f12f9b-970d-43ed-8a0d-e3d9811aacfd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=소재 작성을 시작",
+      "targets": [
+        ["linkText=소재 작성을 시작", "linkText"],
+        ["css=.ag-cell-focus .link", "css:finder"],
+        ["xpath=//a[contains(text(),'소재 작성을 시작')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div/div/div/p/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '')])[6]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'소재 작성을 시작')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c83a1dc-e6ae-4d93-b791-e556ff49a007",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//h3[contains(.,'그룹정보')]",
+      "targets": [
+        ["id=booking-adgroup", "id"],
+        ["css=#booking-adgroup", "css:finder"],
+        ["xpath=//h3[@id='booking-adgroup']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-adgroup-product']/fieldset/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'그룹정보')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "ba95fe3a-8c24-4251-8348-4e2b01296b40",
+      "comment": "",
+      "command": "click",
+      "target": "name=adgroups[0].adgroup.webUrl",
+      "targets": [
+        ["name=adgroups[0].adgroup.webUrl", "name"],
+        ["css=#booking-adgroup-detail .form-row:nth-child(2) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].adgroup.webUrl']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-detail']/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/dl/div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5cd41a9-8038-498f-adf0-e27713846561",
+      "comment": "",
+      "command": "type",
+      "target": "name=adgroups[0].adgroup.webUrl",
+      "targets": [
+        ["name=adgroups[0].adgroup.webUrl", "name"],
+        ["css=#booking-adgroup-detail .form-row:nth-child(2) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].adgroup.webUrl']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-detail']/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/dl/div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "http://www.naver.com"
+    }, {
+      "id": "91db44bd-675b-4667-ad30-6784927cc40d",
+      "comment": "",
+      "command": "click",
+      "target": "name=adgroups[0].adgroup.tiktokUrl",
+      "targets": [
+        ["name=adgroups[0].adgroup.tiktokUrl", "name"],
+        ["css=#booking-adgroup-detail .form-row:nth-child(3) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].adgroup.tiktokUrl']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-detail']/dl/div[3]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/dl/div[3]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4aa08bd5-b8f0-4ac2-97a5-8198a64dc92b",
+      "comment": "",
+      "command": "type",
+      "target": "name=adgroups[0].adgroup.tiktokUrl",
+      "targets": [
+        ["name=adgroups[0].adgroup.tiktokUrl", "name"],
+        ["css=#booking-adgroup-detail .form-row:nth-child(3) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].adgroup.tiktokUrl']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-detail']/dl/div[3]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/dl/div[3]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "http://www.naver.com"
+    }, {
+      "id": "72f58881-bd29-4dcf-bf28-01b3dd856313",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-row:nth-child(6) .pc-form-radio",
+      "targets": [
+        ["css=.form-row:nth-child(6) .pc-form-radio", "css:finder"],
+        ["xpath=//fieldset[@id='booking-adgroup-detail']/dl/div[6]/div/dd/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div/dd/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f362f325-47c7-4602-9ef3-3c7c6bdfa288",
+      "comment": "",
+      "command": "click",
+      "target": "name=adgroups[0].adgroupads[0].creativeUrl",
+      "targets": [
+        ["name=adgroups[0].adgroupads[0].creativeUrl", "name"],
+        ["css=#tiktokurl .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].adgroupads[0].creativeUrl']", "xpath:attributes"],
+        ["xpath=//div[@id='tiktokurl']/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/fieldset/dl/div[3]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f4f4ed8-7061-4de4-a0ed-065615e915bd",
+      "comment": "",
+      "command": "type",
+      "target": "name=adgroups[0].adgroupads[0].creativeUrl",
+      "targets": [
+        ["name=adgroups[0].adgroupads[0].creativeUrl", "name"],
+        ["css=#tiktokurl .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].adgroupads[0].creativeUrl']", "xpath:attributes"],
+        ["xpath=//div[@id='tiktokurl']/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/fieldset/dl/div[3]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "http://www.naver.com"
+    }, {
+      "id": "a1ba5395-a409-4c75-b3a9-cc2fab1ca2bb",
+      "comment": "",
+      "command": "click",
+      "target": "name=adgroups[0].adgroupads[0].caption",
+      "targets": [
+        ["name=adgroups[0].adgroupads[0].caption", "name"],
+        ["css=#booking-ad-caption .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].adgroupads[0].caption']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-ad-caption']/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/fieldset/dl/div[4]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7904a2b-7997-4ee5-863a-003a60fb59df",
+      "comment": "",
+      "command": "type",
+      "target": "name=adgroups[0].adgroupads[0].caption",
+      "targets": [
+        ["name=adgroups[0].adgroupads[0].caption", "name"],
+        ["css=#booking-ad-caption .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[0].adgroupads[0].caption']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-ad-caption']/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/fieldset/dl/div[4]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "http://www.naver.com"
+    }, {
+      "id": "99f1bb09-6ea3-419f-8ede-d9b06effb6cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > label",
+      "targets": [
+        ["css=li:nth-child(1) > label", "css:finder"],
+        ["xpath=//div[@id='booking-ad-cta']/div[2]/ul/div/ul/li/label", "xpath:idRelative"],
+        ["xpath=//li/label", "xpath:position"],
+        ["xpath=//label[contains(.,'다운로드')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62cd0134-c2a0-49c6-82cd-da2a240df908",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > label",
+      "targets": [
+        ["css=li:nth-child(2) > label", "css:finder"],
+        ["xpath=//div[@id='booking-ad-cta']/div[2]/ul/div/ul/li[2]/label", "xpath:idRelative"],
+        ["xpath=//li[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'지금신청')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d90008b8-9ade-4af8-b92f-7f13c3f0e2d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#booking-ad-cta > dd",
+      "targets": [
+        ["css=#booking-ad-cta > dd", "css:finder"],
+        ["xpath=//div[@id='booking-ad-cta']/dd", "xpath:idRelative"],
+        ["xpath=//div[2]/div/fieldset/dl/div[5]/div/dd", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e476814e-cab0-4ba1-a708-43bf021e8e4e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'임시저장')]",
+      "targets": [
+        ["css=.flex-item:nth-child(2) > .pc-buttons", "css:finder"],
+        ["xpath=(//button[@type='button'])[79]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//aside/div/div/div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'임시저장')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5bb2f0b3-4651-4d3a-abe9-7df4dad1b3c3",
+    "name": "5.로그아웃",
+    "commands": [{
+      "id": "f80757ad-5e5e-45ad-8c1a-4698b340a349",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1918b417-0228-4e68-8d84-70881599b849",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0aa7c6cd-1c01-4764-b1dc-c430b0f00a99",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-account",
+      "targets": [
+        ["css=.btn-account", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "078545f1-b962-4cd0-9b4d-2b71e48147a9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=로그아웃",
+      "targets": [
+        ["linkText=로그아웃", "linkText"],
+        ["css=.link > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'로그아웃')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/sso/release')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'로그아웃')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "91271bf6-5270-4b7e-8e95-a5a198df73e8",
+    "name": "7.검수요청 캠페인의 반려",
+    "commands": [{
+      "id": "4823701f-c00a-4f32-848e-232d8d490c88",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51c56677-4c16-40fb-9da9-70d4892d9398",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af83506b-2231-44a9-93c4-66faaaa2d970",
+      "comment": "",
+      "command": "click",
+      "target": "css=.layout-contents-container",
+      "targets": [
+        ["css=.layout-contents-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div", "xpath:idRelative"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60e3cece-64cd-4d73-a341-8d2254fba62c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div",
+      "targets": [
+        ["css=.ag-cell-focus .ag-cell-campaign", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f56aaf7-5df8-4033-a5c7-460b60ad1e61",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ag-cell-focus .ag-cell-campaign",
+      "targets": [
+        ["css=.ag-cell-focus .ag-cell-campaign", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3c3efaa-9051-4bf7-bf73-84db6826bdef",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div/div/ul/button[2]",
+      "targets": [
+        ["id=354_check_book", "id"],
+        ["css=#\\33 54_check_book", "css:finder"],
+        ["xpath=//button[@id='354_check_book']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div/div/ul/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'검수하기')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97aeca1c-e518-4f3c-969c-cdc9b018787f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'반려')]",
+      "targets": [
+        ["css=.flex-item:nth-child(2) > .pc-buttons:nth-child(1) > .btn-label", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div[3]/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//aside/div/div/div[3]/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'반려')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22060d39-6c6d-41c9-8dd9-e9d18bed8c3d",
+      "comment": "",
+      "command": "click",
+      "target": "name=bookingComment.comment",
+      "targets": [
+        ["name=bookingComment.comment", "name"],
+        ["css=.pc-text-area", "css:finder"],
+        ["xpath=//textarea[@name='bookingComment.comment']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b69794a-1172-47ab-8a77-e71584323d0f",
+      "comment": "",
+      "command": "click",
+      "target": "name=rejectComment",
+      "targets": [
+        ["name=rejectComment", "name"],
+        ["css=.pc-form-group:nth-child(1) .pc-text-area", "css:finder"],
+        ["xpath=//textarea[@name='rejectComment']", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[2]/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1880d5f-4b25-4f2f-8fc1-f1caff80982f",
+      "comment": "",
+      "command": "click",
+      "target": "name=rejectComment",
+      "targets": [
+        ["name=rejectComment", "name"],
+        ["css=.pc-form-group:nth-child(1) .pc-text-area", "css:finder"],
+        ["xpath=//textarea[@name='rejectComment']", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[2]/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cda817d-5214-4d1b-9c2c-cad1b32490b3",
+      "comment": "",
+      "command": "type",
+      "target": "name=rejectComment",
+      "targets": [
+        ["name=rejectComment", "name"],
+        ["css=.pc-form-group:nth-child(1) .pc-text-area", "css:finder"],
+        ["xpath=//textarea[@name='rejectComment']", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[2]/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/textarea", "xpath:position"]
+      ],
+      "value": "반려사유입력 테스트"
+    }, {
+      "id": "f2359849-fa76-45c2-91b2-fe1719d41926",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flex-item:nth-child(1) > .pc-buttons:nth-child(2)",
+      "targets": [
+        ["css=.flex-item:nth-child(1) > .pc-buttons:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[92]", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[3]/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'저장')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "19382cbd-bdaf-41ba-b2db-8d9605d05ed1",
+    "name": "6.login(운영자)",
+    "commands": [{
+      "id": "c783f464-94a9-4673-a804-17c64f783ae2",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4e0265f-464f-49c6-a726-ac786b5da82b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6605634-3789-4ca0-9945-01e88fb3bb5b",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34374fb9-a351-4bb8-91e4-b18743e02169",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b133c372-7dc8-4665-bdf1-0e02eca14c35",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "wj.noh@pioncorp.com"
+    }, {
+      "id": "73af4d8a-d521-438f-b85d-0e043317b16d",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "eef21b62-b2bc-49e0-8320-6135758a2051",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSignin",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01fb79b1-15c2-4211-9dd8-57b51a6c8b37",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "15113385-4b4c-4719-b2cc-976c6285aff4",
+    "name": "8.로그아웃",
+    "commands": [{
+      "id": "21e199d6-0880-4e52-870b-3d3b4a3afb3b",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbabe0fc-fded-4b54-8a5d-e4d9bd65b8ca",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "737bd259-7a63-4ada-9ad5-2a9f4954447a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-account",
+      "targets": [
+        ["css=.btn-account", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42a4f571-1ae7-4b11-9f9a-8cd1d0425834",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=로그아웃",
+      "targets": [
+        ["linkText=로그아웃", "linkText"],
+        ["css=.link > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'로그아웃')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/sso/release')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'로그아웃')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ef6e3c2e-f1e2-4c0f-96aa-e3b4d27699cf",
+    "name": "9.login(에이전시)",
+    "commands": [{
+      "id": "3aae0d3b-065f-4194-8414-5743afb000b2",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95a73b74-cc3f-4854-9703-10e9bb784da3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "048fea6e-58fb-4af0-86ab-b76e1aadc303",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1861ae21-05ab-4f89-afa1-9b813d619326",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a53f38d-9fbc-4be7-92c0-6e5d6ec663d5",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "nohwoojoo@naver.com"
+    }, {
+      "id": "27fd1279-8e5a-4559-9296-42faa72823a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "95542764-2741-4d7b-b3f1-d880a2582b34",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSignin",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "747e49be-4c9a-41e3-ba23-a20f6dc1bca0",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "6982b3b9-0bfb-41e5-ac0a-e4df2fba4ab0",
+    "name": "10.반려내용수정후다시제출",
+    "commands": [{
+      "id": "040fa779-74a8-4398-ad7b-3dfa410f36c1",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "742f2b04-e85a-43c8-b862-4e1bdacca47b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5b7f10a-7f69-4b99-9331-0ff340de22da",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(.,'✓ 반려 내용 수정 후, 다시 검수 요청하세요.')]",
+      "targets": [
+        ["css=.ag-cell-focus .guide > span", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'✓ 반려 내용 수정 후, 다시 검수 요청하세요.')]", "xpath:innerText"]
+      ],
+      "value": "20000"
+    }, {
+      "id": "eaf2a2e9-70b1-4abb-912c-6a19e6fae49f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=반려 내용 수정",
+      "targets": [
+        ["linkText=반려 내용 수정", "linkText"],
+        ["css=.ag-cell-focus .link", "css:finder"],
+        ["xpath=//a[contains(text(),'반려 내용 수정')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div/div/div/p/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '')])[6]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'반려 내용 수정')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d00147e1-43e8-4425-a821-2a8239c88f43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pc-buttons:nth-child(2) > .btn-label",
+      "targets": [
+        ["css=.pc-buttons:nth-child(2) > .btn-label", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div[3]/div[2]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c02cb53-02fa-43d5-9ed6-d14e17e0cb61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flex-item > .pc-buttons:nth-child(1)",
+      "targets": [
+        ["css=.flex-item > .pc-buttons:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='button'])[73]", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'닫기')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bc84d61b-cba4-4066-88a6-a21de9d2573e",
+    "name": "11.로그아웃",
+    "commands": [{
+      "id": "568f2a8a-48b2-4303-a528-ff02c87f1cae",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a4a6aa4-b80b-41f8-807e-75acf3f6ed9e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f4f0ad4-9d08-416c-9f17-912c630e1a4c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-account",
+      "targets": [
+        ["css=.btn-account", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e17d9e1-5a54-4874-95c8-bda682c6e59e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=로그아웃",
+      "targets": [
+        ["linkText=로그아웃", "linkText"],
+        ["css=.link > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'로그아웃')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/sso/release')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'로그아웃')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ebe5b49a-d635-46db-aaa5-323bced3938e",
+    "name": "12.login(운영자)",
+    "commands": [{
+      "id": "81d41072-b3eb-460e-82c4-448eade142be",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a310e1f3-f399-4757-ad0f-b38e7ca13c38",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a6ffe28-3654-4d44-aedb-7dfc6522806b",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1c92351-b7b8-4d4c-89fe-64ffa11b485a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2f56851-782d-43c9-8a9d-93cc89c175ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "wj.noh@pioncorp.com"
+    }, {
+      "id": "574464dc-2456-498b-b937-81700e942433",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "e209a68b-5038-4bed-b179-19fd3b33bde0",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSignin",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8b94e8c-6832-4ad6-9892-b60b0fd72bcf",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "79be6b43-a910-4aa7-8b27-318ddb4e0bc3",
+    "name": "13.검수요청 캠페인의 승인",
+    "commands": [{
+      "id": "9571e718-f6e6-4663-9c17-088325065969",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46401675-fe0d-499e-ba89-ead1f23a6695",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84ebae24-0a05-4721-9a33-0380be35ccd9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.layout-contents-container",
+      "targets": [
+        ["css=.layout-contents-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div", "xpath:idRelative"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fc2efad-f1ec-4ea2-b06a-ae2a0eb9c091",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div",
+      "targets": [
+        ["css=.ag-cell-focus .ag-cell-campaign", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "266f34df-778d-45cf-9dde-70158ad80394",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ag-cell-focus .ag-cell-campaign",
+      "targets": [
+        ["css=.ag-cell-focus .ag-cell-campaign", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c73ef30-f65f-490f-bd08-24c72475dfab",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div/div/ul/button[2]",
+      "targets": [
+        ["id=354_check_book", "id"],
+        ["css=#\\33 54_check_book", "css:finder"],
+        ["xpath=//button[@id='354_check_book']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div/div/ul/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'검수하기')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f386a2ee-f7c8-4ef4-90c8-2137bc392bd6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'승인')]",
+      "targets": [
+        ["css=.pc-buttons:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[89]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div[3]/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'승인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "04dc7511-63ee-4632-8277-c7b8ba5324c3",
+    "name": "14.로그아웃",
+    "commands": [{
+      "id": "1c33c7cc-eec2-40b9-8950-8cf32310018f",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1bb15248-09a5-46e6-96a4-96baf7602022",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a16712e-6872-47e5-ac84-7ba743ff1289",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-account",
+      "targets": [
+        ["css=.btn-account", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44a36340-393d-4846-ad53-b1d9119fc9ec",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=로그아웃",
+      "targets": [
+        ["linkText=로그아웃", "linkText"],
+        ["css=.link > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'로그아웃')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/sso/release')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'로그아웃')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "92f3fb5a-579b-4717-a9c4-e6057efe463d",
+    "name": "15.login(에이전시)",
+    "commands": [{
+      "id": "90fdc1a8-a7fa-449a-a170-dfdc6a0d3f64",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f728612-b8c7-43d1-a6f7-853ee6f97be9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5b93e00-17e4-4da0-8178-f6d1f0aaac98",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d644bd4-93c9-4986-9568-65415195bd57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d396b17f-90bd-45b7-b8d4-3e4c2128f25f",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "nohwoojoo@naver.com"
+    }, {
+      "id": "79568cfc-862d-44d2-b237-fcf58655cca9",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "69939645-a53d-4957-9b7d-eaa75d45d3f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSignin",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03ee351a-a327-4aac-9992-a2bbb1bedada",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "dd7d6b53-312d-4cfa-9ed5-dff30c9f96a3",
+    "name": "16.소재검수요청",
+    "commands": [{
+      "id": "815b6f9c-f0bf-426c-8fcb-2de53473f2b0",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5488c16e-b16e-4327-bd7c-98c1ea37e251",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f85b5974-fd33-49d2-b8b4-b7b8dc1b3b03",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(.,'✓ 그룹 디테일 및 소재 검수 요청하세요.')]",
+      "targets": [
+        ["css=.ag-cell-focus .guide > span", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'✓ 그룹 디테일 및 소재 검수 요청하세요.')]", "xpath:innerText"]
+      ],
+      "value": "20000"
+    }, {
+      "id": "c6949c49-e123-451f-9bd2-ec3fe8f13d90",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=소재 검수 요청",
+      "targets": [
+        ["linkText=소재 검수 요청", "linkText"],
+        ["css=.ag-cell-focus .link", "css:finder"],
+        ["xpath=//a[contains(text(),'소재 검수 요청')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div/div/div/p/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '')])[6]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'소재 검수 요청')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "084d50f8-b166-4b24-9e17-f51092554018",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//h3[contains(.,'그룹정보')]",
+      "targets": [
+        ["id=booking-adgroup", "id"],
+        ["css=#booking-adgroup", "css:finder"],
+        ["xpath=//h3[@id='booking-adgroup']", "xpath:attributes"],
+        ["xpath=//div[@id='booking-adgroup-product']/fieldset/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'그룹정보')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "9a8fbb32-8c05-4367-ba15-c8b86fd45ea2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'검수요청')]",
+      "targets": [
+        ["css=.pc-buttons:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[77]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div[3]/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'검수요청')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e8f0bc3-cf64-4e80-a847-0a388c3d4246",
+      "comment": "",
+      "command": "click",
+      "target": "css=.scroll-container:nth-child(2) .pc-modal-contents",
+      "targets": [
+        ["css=.scroll-container:nth-child(2) .pc-modal-contents", "css:finder"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//aside/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8172241c-90cc-423d-a99f-4c05a11a7462",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'확인')]",
+      "targets": [
+        ["css=.flex-item:nth-child(1) > .pc-buttons:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[79]", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1aab891b-e01d-43ec-b652-9c67367181f0",
+    "name": "17.로그아웃",
+    "commands": [{
+      "id": "b8521a03-ec68-433a-8f06-7aba8b277802",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8770ec0-883a-43d7-b793-56b72ba5447a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "563aa1c8-df54-4c73-8df8-5944139127a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-account",
+      "targets": [
+        ["css=.btn-account", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9013d03e-32ef-4e90-8c16-3e77275e1cc9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=로그아웃",
+      "targets": [
+        ["linkText=로그아웃", "linkText"],
+        ["css=.link > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'로그아웃')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/sso/release')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'로그아웃')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3d1a2729-f1c5-41cc-85c0-1d58232efa52",
+    "name": "18.login(운영자)",
+    "commands": [{
+      "id": "ba0ad152-a058-4b49-8880-27d96dbba978",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98434bbb-2177-40b1-ab36-7e296a365345",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "238a82d9-0496-47c1-9444-c940e6b00938",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1becb898-4f8a-4ce7-b583-9661ce117bf2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4213f388-3274-4618-918f-79a8b01833f8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "wj.noh@pioncorp.com"
+    }, {
+      "id": "bf017e0c-7512-4587-a540-3f3153539608",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "479f5c63-191c-4e27-916b-71dd27abf67b",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSignin",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "766e5315-d74f-41e1-bcdb-99a1ff9a378c",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "de85161f-0236-4794-afde-f038f2f2a029",
+    "name": "19.소재열어검수하기",
+    "commands": [{
+      "id": "e9255811-eaf0-48d5-a3cc-3999d2da9b1f",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "450e40ed-75c5-4111-89c6-aa27c05bd79a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17186663-f8be-4a70-a50d-3be03518c2a3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div[2]/div",
+      "targets": [
+        ["css=.pc-select__indicator", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//fieldset/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7c2ce73-5c9d-4fe7-95a1-4a8a22c61d71",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container:nth-child(2)",
+      "targets": [
+        ["css=.container:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a78cc2c-61ca-4892-8ffb-c5c9be0a549a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]",
+      "targets": [
+        ["css=.ag-cell-focus", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32409d13-c2df-4213-b9e1-fc4d5b9216c1",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(.,'소재 검수')]",
+      "targets": [
+        ["id=397_modify_rev", "id"],
+        ["css=#\\33 97_modify_rev", "css:finder"],
+        ["xpath=//button[@id='397_modify_rev']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'소재 검수')]", "xpath:innerText"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "d03924e4-2666-44ce-9457-c403bebd7d60",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'소재 검수')]",
+      "targets": [
+        ["id=364_modify_rev", "id"],
+        ["css=#\\33 64_modify_rev", "css:finder"],
+        ["xpath=//button[@id='364_modify_rev']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'소재 검수')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a23818c0-c8eb-4cb6-ba05-0c92e55116fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pc-modal-contents",
+      "targets": [
+        ["css=.pc-modal-contents", "css:finder"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//aside/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dca79ca-61ba-409a-84bc-49bb28dbcb79",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'확인')]",
+      "targets": [
+        ["css=.pc-buttons:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[78]", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'확인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "783a2a45-f4f5-4a28-a7db-73680dfedb1d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'승인')]",
+      "targets": [
+        ["css=.pc-buttons:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[83]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/aside/div/div/div[3]/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'승인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6ea68dda-af5f-4277-80a8-a24c014bd2e1",
+    "name": "20.로그아웃",
+    "commands": [{
+      "id": "bc93621c-d0c2-40ab-9241-8218b670ba00",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "214580ee-62ed-4628-ae6a-2e93231a26e0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f8df200-461c-4877-be6a-25c754bfc574",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-account",
+      "targets": [
+        ["css=.btn-account", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "161dd4aa-20ac-472b-8977-406b9de7ba86",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=로그아웃",
+      "targets": [
+        ["linkText=로그아웃", "linkText"],
+        ["css=.link > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'로그아웃')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/sso/release')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'로그아웃')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d5e6bbf2-c4e6-4103-96f0-4b62e1626d76",
+    "name": "21.login(에이전시)",
+    "commands": [{
+      "id": "42c24156-9744-4c3c-8b5d-3f7a30d74367",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf8a1ae6-ea19-4f9d-b7dd-dc50a18bb4fb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "927aaced-29e3-409e-9bc3-cc02676ef0ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c12e2d2e-55ed-4e11-83fc-16a9c701c170",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "781f7b46-e73a-424a-ae43-ff04133a0dce",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "nohwoojoo@naver.com"
+    }, {
+      "id": "70540579-82f4-4055-befd-cdcd9a647a1f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "33657576-32e8-4f1c-bbc1-5451b616594e",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSignin",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2f4ae79-dbc7-43af-b1f2-c3c68091d882",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }],
+  "suites": [{
+    "id": "8c5dbd20-0eb8-4344-8d5b-7d9eafc2f43b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://dev-tapcert.pion.co.kr/"],
+  "plugins": []
+}
