@@ -104,7 +104,7 @@
     }]
   }, {
     "id": "83436604-80dd-4261-9937-8ff03e48bba6",
-    "name": "2.새로운 캠페인 임시저장(native)",
+    "name": "2.새로운 캠페인 임시저장(native_diversion)",
     "commands": [{
       "id": "422f707d-9f80-46d8-b43b-6c8402cc56af",
       "comment": "",
@@ -143,6 +143,13 @@
         ["xpath=//div[2]/div[2]/button/span", "xpath:position"],
         ["xpath=//span[contains(.,'+ 새로운 캠페인')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "0917e506-7088-496f-b336-4ed20f51b0ea",
+      "comment": "",
+      "command": "click",
+      "target": "name=campaignName",
+      "targets": [],
       "value": ""
     }, {
       "id": "020240a2-2eac-4249-9267-f705eaa83f44",
@@ -207,7 +214,7 @@
       "value": ""
     }, {
       "id": "b194e461-09ef-45fb-af66-dc19411a945d",
-      "comment": "",
+      "comment": "Native의 틱톡 아이디 입력",
       "command": "type",
       "target": "name=adgroups[0].tiktokAccountUid",
       "targets": [
@@ -222,29 +229,55 @@
       "id": "dfe85873-30c2-4e27-b886-204ec83774f0",
       "comment": "",
       "command": "click",
-      "target": "css=#booking-adgroup-period .form-row:nth-child(1) dd",
+      "target": "css=.tab-actions > .pc-buttons",
       "targets": [
-        ["css=#booking-adgroup-period .form-row:nth-child(1) dd", "css:finder"],
-        ["xpath=//fieldset[@id='booking-adgroup-period']/dl/div/div/dd", "xpath:idRelative"],
-        ["xpath=//fieldset[2]/dl/div/div/dd", "xpath:position"]
+        ["css=.tab-actions > .pc-buttons", "css:finder"],
+        ["xpath=(//button[@type='button'])[68]", "xpath:attributes"],
+        ["xpath=//div[@id='booking-sidebar']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/button", "xpath:position"]
       ],
       "value": ""
     }, {
       "id": "24ef960a-6fe1-49e4-8a40-35e3df44008f",
       "comment": "",
       "command": "click",
-      "target": "name=bookingComment.comment",
+      "target": "css=label:nth-child(4)",
       "targets": [
-        ["name=bookingComment.comment", "name"],
-        ["css=.pc-text-area", "css:finder"],
-        ["xpath=//textarea[@name='bookingComment.comment']", "xpath:attributes"],
-        ["xpath=//div[@id='booking-sidebar']/div/fieldset[3]/div/div/div/textarea", "xpath:idRelative"],
-        ["xpath=//textarea", "xpath:position"]
+        ["css=label:nth-child(4)", "css:finder"],
+        ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[3]/div/dd/div/div/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Diversion')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "13eff973-a69d-4eb5-a8ef-5e52c3874b07",
+      "id": "4ef5f2d7-89d2-4b8b-895e-85ff3d22d7d8",
+      "comment": "Diversion의 틱톡 계정 이름 입력",
+      "command": "type",
+      "target": "name=adgroups[1].tiktokAccountName",
+      "targets": [
+        ["name=adgroups[1].tiktokAccountName", "name"],
+        ["css=.pc-form-container:nth-child(1) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adgroups[1].tiktokAccountName']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/dl/div/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "테스트용틱톡계정이름"
+    }, {
+      "id": "a873bc11-d667-4946-ba1f-916f132cf3bb",
       "comment": "",
+      "command": "type",
+      "target": "id=pfile-1",
+      "targets": [
+        ["id=pfile-1", "id"],
+        ["css=#pfile-1", "css:finder"],
+        ["xpath=//input[@id='pfile-1']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div[2]/div/dd/div/div/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "/Users/pion/Desktop/TAP dev QA/tiktok_test.jpg"
+    }, {
+      "id": "13eff973-a69d-4eb5-a8ef-5e52c3874b07",
+      "comment": "요청메시지 입력",
       "command": "type",
       "target": "name=bookingComment.comment",
       "targets": [
@@ -254,7 +287,7 @@
         ["xpath=//div[@id='booking-sidebar']/div/fieldset[3]/div/div/div/textarea", "xpath:idRelative"],
         ["xpath=//textarea", "xpath:position"]
       ],
-      "value": "111"
+      "value": "이런거 요청합니다."
     }, {
       "id": "103c0797-1371-4469-a4c2-b58d9c66163e",
       "comment": "",
