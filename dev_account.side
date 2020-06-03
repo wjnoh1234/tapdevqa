@@ -1,0 +1,809 @@
+{
+  "id": "31086fdd-c601-4af7-b0c2-3595cc71e650",
+  "version": "2.0",
+  "name": "dev_account",
+  "url": "https://dev-tapcert.pion.co.kr",
+  "tests": [{
+    "id": "3963642a-e487-49fe-a1e7-e3ba0b63a9b2",
+    "name": "1.login(에이전시)",
+    "commands": [{
+      "id": "46d29f30-5c45-4a53-8e35-79ccf3e11b8a",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82bfca16-b5b9-4b26-8549-c8f838ebc0fe",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "666cbef3-0a09-4569-9f4d-2996f4c842da",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92e474aa-0027-46a5-9aef-7b7013e4baff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "490d6d03-7d55-49b2-922c-0d325167d8b8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "nohwoojoo@naver.com"
+    }, {
+      "id": "5d703b1a-987b-4b1c-ae91-2be6000a831f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "c46cef88-f111-4684-bd07-4f869400dda8",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSignin",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91782bd0-582e-4e5d-9bcf-eb65b868e537",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'로그인')]",
+      "targets": [
+        ["id=btnSignin", "id"],
+        ["css=#btnSignin", "css:finder"],
+        ["xpath=//button[@id='btnSignin']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/filedset/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'로그인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "15113385-4b4c-4719-b2cc-976c6285aff4",
+    "name": "8.로그아웃",
+    "commands": [{
+      "id": "21e199d6-0880-4e52-870b-3d3b4a3afb3b",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbabe0fc-fded-4b54-8a5d-e4d9bd65b8ca",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "737bd259-7a63-4ada-9ad5-2a9f4954447a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-account",
+      "targets": [
+        ["css=.btn-account", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42a4f571-1ae7-4b11-9f9a-8cd1d0425834",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=로그아웃",
+      "targets": [
+        ["linkText=로그아웃", "linkText"],
+        ["css=.link > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'로그아웃')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/sso/release')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'로그아웃')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "404bfc5a-018e-4ef3-abce-95a4296c5919",
+    "name": "개인정보 수정",
+    "commands": [{
+      "id": "afb1d001-fbd8-4b66-98f0-0941e11ac9d6",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23957cf3-f42a-4e69-a6c1-d161ae9ccde3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d396c8b-283e-42d2-8f69-178e2a0674cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-account",
+      "targets": [
+        ["css=.btn-account", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69fffe41-7709-4d32-8915-1c93215be499",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=정보수정",
+      "targets": [
+        ["linkText=정보수정", "linkText"],
+        ["css=.link > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'정보수정')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/myInfo')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'정보수정')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ae2390b-a096-4d14-9c0d-9408db25bc56",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-row:nth-child(2) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1365c542-4c4c-41a0-a0a7-881ca64775ce",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-row:nth-child(2) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "8a413143-2b46-4e98-9025-ebd09f06d6a2",
+      "comment": "",
+      "command": "type",
+      "target": "name=newPassword",
+      "targets": [
+        ["name=newPassword", "name"],
+        ["css=.form-row:nth-child(3) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='newPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[3]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "e0b0cd5a-9b03-4a5b-8089-35161999d40a",
+      "comment": "",
+      "command": "type",
+      "target": "name=newPasswordConfirm",
+      "targets": [
+        ["name=newPasswordConfirm", "name"],
+        ["css=.form-row:nth-child(4) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='newPasswordConfirm']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[4]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "shdnwn90"
+    }, {
+      "id": "1e7d41a2-328c-46c4-9980-e3e15134f25a",
+      "comment": "",
+      "command": "type",
+      "target": "name=company",
+      "targets": [
+        ["name=company", "name"],
+        ["css=.form-row:nth-child(6) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='company']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[6]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "회사명수정테스트"
+    }, {
+      "id": "75e2ed0d-b916-4741-8ed1-cec481f8ea49",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-row:nth-child(7) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[7]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[7]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "이름수정테스트"
+    }, {
+      "id": "4df8e222-49f0-482d-b745-2f06f5aa19c6",
+      "comment": "",
+      "command": "type",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.form-row:nth-child(8) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[8]/div/dd/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": "연락처수정테스트"
+    }, {
+      "id": "676585d5-79e0-4b5c-ad71-b079f8c272b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=label:nth-child(2)",
+      "targets": [
+        ["css=label:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[9]/div/dd/div/div/div/label", "xpath:idRelative"],
+        ["xpath=//div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'동의')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8ba3b7e-26c1-4270-bfa4-b93ce11dd716",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pc-buttons:nth-child(2)",
+      "targets": [
+        ["css=.pc-buttons:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/dl/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'수정하기')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "937fdc7b-d214-46bf-9a1c-a3eb4671bfa8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tiktok Agency Platform",
+      "targets": [
+        ["linkText=Tiktok Agency Platform", "linkText"],
+        ["css=.service-logo", "css:finder"],
+        ["xpath=//a[contains(text(),'Tiktok Agency Platform')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/h2/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/campaign')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Tiktok Agency Platform')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0e9da6b-0d9f-47d6-b3e5-294b4ec55227",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[contains(.,'+ 새로운 캠페인')]",
+      "targets": [
+        ["css=.pc-buttons", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+ 새로운 캠페인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "d1fd2118-cc14-4ac5-a5aa-fc3b51ad2bb1",
+    "name": "광고주추가제거",
+    "commands": [{
+      "id": "68cd76ba-cd51-40b2-ad9e-84dc2978e076",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2782d41-c028-49fb-be79-357b8db3e68b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c682a0cf-c6a4-4796-9829-02206ac47e01",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=광고주 관리",
+      "targets": [
+        ["linkText=광고주 관리", "linkText"],
+        ["css=.navigation > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'광고주 관리')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/advertiser')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'광고주 관리')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fdfc306-8e85-40a9-8c0a-e64a278b5b7f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=광고주 관리",
+      "targets": [
+        ["linkText=광고주 관리", "linkText"],
+        ["css=.selected", "css:finder"],
+        ["xpath=//a[contains(text(),'광고주 관리')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/advertiser')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'광고주 관리')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b4db0a9-067e-45c8-9ef3-2a245b760a8d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=광고주 관리",
+      "targets": [
+        ["linkText=광고주 관리", "linkText"],
+        ["css=.selected", "css:finder"],
+        ["xpath=//a[contains(text(),'광고주 관리')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/advertiser')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'광고주 관리')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e7b61d4-43a4-477b-8699-89b8f471442e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'+ 광고주 추가')]",
+      "targets": [
+        ["css=.container-actions > .pc-buttons", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+ 광고주 추가')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47d7b854-fa16-4be9-9689-b8601a36dbc7",
+      "comment": "",
+      "command": "type",
+      "target": "name=adaccountName",
+      "targets": [
+        ["name=adaccountName", "name"],
+        ["css=.form-row:nth-child(1) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adaccountName']", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/fieldset/dl/div/div/dd/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "광고주추가테스트"
+    }, {
+      "id": "d92bee08-8ec6-43aa-86f2-4fc086a65d8d",
+      "comment": "",
+      "command": "type",
+      "target": "name=adaccountUid",
+      "targets": [
+        ["name=adaccountUid", "name"],
+        ["css=.form-row:nth-child(2) .pc-text-input", "css:finder"],
+        ["xpath=//input[@name='adaccountUid']", "xpath:attributes"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/fieldset/dl/div[2]/div/dd/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/dd/div/div/input", "xpath:position"]
+      ],
+      "value": "6444444444848484899"
+    }, {
+      "id": "7b5ef814-3044-4be6-a22b-49010847df5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pc-modal-contents",
+      "targets": [
+        ["css=.pc-modal-contents", "css:finder"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/fieldset", "xpath:idRelative"],
+        ["xpath=//fieldset", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec8d31ff-1079-485e-ab1a-aff0df8277ad",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'저장')]",
+      "targets": [
+        ["css=.pc-buttons:nth-child(2) > .btn-label", "css:finder"],
+        ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/div[2]/div/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'저장')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc2c52af-92d8-4394-a87c-1e4c072d2339",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'삭제')]",
+      "targets": [
+        ["css=li:nth-child(1) .pc-buttons", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/ul/li/div/div/button", "xpath:idRelative"],
+        ["xpath=//li/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'삭제')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a6786a9-db62-4128-b3b3-70c42e23ea4f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tiktok Agency Platform",
+      "targets": [
+        ["linkText=Tiktok Agency Platform", "linkText"],
+        ["css=.service-logo", "css:finder"],
+        ["xpath=//a[contains(text(),'Tiktok Agency Platform')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/header/div/h2/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/campaign')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Tiktok Agency Platform')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56cd14b5-c541-4449-956f-f100fbc37e33",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//span[contains(.,'+ 새로운 캠페인')]",
+      "targets": [
+        ["css=.btn-label", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'+ 새로운 캠페인')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "fe6b6e12-9847-4b80-b918-b7a98038005d",
+    "name": "각종 외부페이지확인",
+    "commands": [{
+      "id": "21f2a39e-6ffb-460e-8aa0-5f74cd3923f2",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fc9fec3-b914-4e5d-aa91-2da134d04862",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57bc00aa-260b-457c-a2ae-d7672893d062",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=회사소개",
+      "targets": [
+        ["linkText=회사소개", "linkText"],
+        ["css=.footer-links > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'회사소개')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/footer/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.pioncorp.com/')]", "xpath:href"],
+        ["xpath=//div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'회사소개')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6226",
+      "windowTimeout": 2000
+    }, {
+      "id": "64f3a4f8-516c-4744-b464-559190ffcfee",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01a9f18f-a3fd-445e-974c-4d1d1f0cb775",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win6226}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd461499-ab5f-4185-b034-cabbbbfebb53",
+      "comment": "",
+      "command": "click",
+      "target": "css=#block-yui_3_17_2_1_1572505091818_12732 p",
+      "targets": [
+        ["css=#block-yui_3_17_2_1_1572505091818_12732 p", "css:finder"],
+        ["xpath=//div[@id='block-yui_3_17_2_1_1572505091818_12732']/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Copyright © 2020 Pion Corp. All rights reserved.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a6491df-4105-4f02-bd8b-011b1ad59ea4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8400cb8-9b80-4f55-bfd4-6f25be7bb28d",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e38319a-702d-4f2d-a395-321aebe4b7f2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=개인정보 처리방침",
+      "targets": [
+        ["linkText=개인정보 처리방침", "linkText"],
+        ["css=.footer-links > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'개인정보 처리방침')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/footer/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://auth.vispot.com/guide/privacy')]", "xpath:href"],
+        ["xpath=//div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'개인정보 처리방침')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4728",
+      "windowTimeout": 2000
+    }, {
+      "id": "e73819fd-c833-4869-acec-063e112257d5",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win4728}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a4238fd-f9b5-449d-a108-90ac41704a21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.statement-title",
+      "targets": [
+        ["css=.statement-title", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'개인정보 처리방침')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8df1dac5-b6f8-4f64-9c6e-5d6f0965819e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75a8f1d8-1d5d-4e00-9549-95c635c45c38",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f425fb4-c73a-446e-8664-6c26ef1f1173",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=이용약관",
+      "targets": [
+        ["linkText=이용약관", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'이용약관')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/footer/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://auth.vispot.com/guide/tou')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'이용약관')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4067",
+      "windowTimeout": 2000
+    }, {
+      "id": "275898b5-7636-4e4c-bf70-9298f72d7328",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win4067}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9ce56ce-2ea2-472e-9566-579cf8b83203",
+      "comment": "",
+      "command": "click",
+      "target": "css=.statement-title",
+      "targets": [
+        ["css=.statement-title", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'이용약관')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17120bb2-f84a-49b1-aede-ec5a765db50a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "746973d8-47b9-490c-855c-f26e683ea551",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "017246d1-fef8-4815-9710-31d8fb3b65d2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=버그신고",
+      "targets": [
+        ["linkText=버그신고", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'버그신고')]", "xpath:link"],
+        ["xpath=//div[@id='tap-root']/footer/div/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://forms.gle/zc4ExbAxUyREjG3j6')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'버그신고')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win921",
+      "windowTimeout": 2000
+    }, {
+      "id": "2edb578a-3cca-41c0-97c2-841105d6bb0f",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win921}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6b9fdfe-428c-4da5-84b2-efa214dc13b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.freebirdFormviewerViewHeaderTitle",
+      "targets": [
+        ["css=.freebirdFormviewerViewHeaderTitle", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04bc468e-28e2-4792-9ff1-9e1c6062cdc2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca02fd3d-1342-480e-8740-638882f5f814",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "26b8c798-1669-4611-962c-fc811fc6ec22",
+    "name": "광고주필터확인",
+    "commands": [{
+      "id": "6f04e196-d40a-4cc8-b003-21ab19e6669f",
+      "comment": "",
+      "command": "open",
+      "target": "https://dev-tap.pion.co.kr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85e151fd-cd3f-43a3-8e9e-5196b09c548b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1788x939",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6374369-4213-4afc-8f65-ed9cd151dc98",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-input",
+      "targets": [
+        ["id=react-select-2-input", "id"],
+        ["css=#react-select-2-input", "css:finder"],
+        ["xpath=//input[@id='react-select-2-input']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59940ff5-b08e-469f-b9a3-c695c8fd1cb7",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-option-8",
+      "targets": [
+        ["id=react-select-2-option-8", "id"],
+        ["css=#react-select-2-option-8", "css:finder"],
+        ["xpath=//div[@id='react-select-2-option-8']", "xpath:attributes"],
+        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div[2]/div/div[9]", "xpath:idRelative"],
+        ["xpath=//div[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c59d4dce-5485-427d-b3f0-c1758631a395",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.pc-select__value-container",
+      "targets": [
+        ["css=.pc-select__value-container", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//fieldset/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a50cc4f-c394-4bbd-9a01-981e465c8cab",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.pc-select__single-value",
+      "targets": [
+        ["css=.pc-select__single-value", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div", "xpath:position"]
+      ],
+      "value": "삼성 이건희(거니짱)"
+    }]
+  }],
+  "suites": [{
+    "id": "8c5dbd20-0eb8-4344-8d5b-7d9eafc2f43b",
+    "name": "개인정보수정",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": ["404bfc5a-018e-4ef3-abce-95a4296c5919", "3963642a-e487-49fe-a1e7-e3ba0b63a9b2", "d1fd2118-cc14-4ac5-a5aa-fc3b51ad2bb1", "fe6b6e12-9847-4b80-b918-b7a98038005d", "26b8c798-1669-4611-962c-fc811fc6ec22"]
+  }],
+  "urls": ["https://dev-tapcert.pion.co.kr/"],
+  "plugins": []
+}
