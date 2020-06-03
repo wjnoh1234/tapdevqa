@@ -103,52 +103,6 @@
       "value": "10000"
     }]
   }, {
-    "id": "15113385-4b4c-4719-b2cc-976c6285aff4",
-    "name": "8.로그아웃",
-    "commands": [{
-      "id": "21e199d6-0880-4e52-870b-3d3b4a3afb3b",
-      "comment": "",
-      "command": "open",
-      "target": "https://dev-tap.pion.co.kr/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "cbabe0fc-fded-4b54-8a5d-e4d9bd65b8ca",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1788x939",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "737bd259-7a63-4ada-9ad5-2a9f4954447a",
-      "comment": "",
-      "command": "click",
-      "target": "css=.btn-account",
-      "targets": [
-        ["css=.btn-account", "css:finder"],
-        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'노우주')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "42a4f571-1ae7-4b11-9f9a-8cd1d0425834",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=로그아웃",
-      "targets": [
-        ["linkText=로그아웃", "linkText"],
-        ["css=.link > a:nth-child(3)", "css:finder"],
-        ["xpath=//a[contains(text(),'로그아웃')]", "xpath:link"],
-        ["xpath=//div[@id='tap-root']/header/div/div/div[2]/div/p/a[2]", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/sso/release')]", "xpath:href"],
-        ["xpath=//a[2]", "xpath:position"],
-        ["xpath=//a[contains(.,'로그아웃')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }]
-  }, {
     "id": "404bfc5a-018e-4ef3-abce-95a4296c5919",
     "name": "개인정보 수정",
     "commands": [{
@@ -763,7 +717,7 @@
       "id": "59940ff5-b08e-469f-b9a3-c695c8fd1cb7",
       "comment": "",
       "command": "click",
-      "target": "id=react-select-2-option-8",
+      "target": "xpath=//div[@id='tap-root']/div/div/fieldset/div/div/div[2]/div/div[8]",
       "targets": [
         ["id=react-select-2-option-8", "id"],
         ["css=#react-select-2-option-8", "css:finder"],
