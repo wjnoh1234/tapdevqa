@@ -277,6 +277,18 @@
         ["xpath=//aside/div/div/div[3]/div[2]/button/span", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "f59f95f5-e52d-43d8-ae65-ac7a144a1cd0",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=.container-box:nth-child(5) > .container-title",
+      "targets": [
+        ["css=.container-box:nth-child(5) > .container-title", "css:finder"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset[3]/h2", "xpath:idRelative"],
+        ["xpath=//fieldset[3]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'요청 메시지')]", "xpath:innerText"]
+      ],
+      "value": "20000"
     }]
   }, {
     "id": "e926ff6c-50c6-4ba8-8678-8b53f7492ad4",
