@@ -179,7 +179,7 @@
       "id": "57445819-fd04-47a7-b8ad-0d1f55838efc",
       "comment": "",
       "command": "click",
-      "target": "id=react-select-3-option-1",
+      "target": "id=react-select-3-option-0",
       "targets": [
         ["id=react-select-3-option-1", "id"],
         ["css=#react-select-3-option-1", "css:finder"],
@@ -210,6 +210,18 @@
         ["xpath=//input[@name='adgroups[0].tiktokAccountUid']", "xpath:attributes"],
         ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[4]/div/dd/div/dl/div/div/dd/div/div/div/input", "xpath:idRelative"],
         ["xpath=//div/dl/div/div/dd/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12430885-f00e-4269-b689-4708ebd1c515",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[contains(.,'Native')]",
+      "targets": [
+        ["css=.form-row:nth-child(3) label:nth-child(2)", "css:finder"],
+        ["xpath=//fieldset[@id='booking-adgroup-product']/dl/div[3]/div/dd/div/div/div/label", "xpath:idRelative"],
+        ["xpath=//div[3]/div/dd/div/div/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Native')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
@@ -310,6 +322,18 @@
         ["xpath=//aside/div/div/div[3]/div[2]/button/span", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "9a77a4c4-2315-4467-b87e-b2b373204e7e",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "xpath=//h2[contains(.,'요청 메시지')]",
+      "targets": [
+        ["css=.container-box:nth-child(5) > .container-title", "css:finder"],
+        ["xpath=//div[@id='booking-sidebar']/div/fieldset[3]/h2", "xpath:idRelative"],
+        ["xpath=//fieldset[3]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'요청 메시지')]", "xpath:innerText"]
+      ],
+      "value": "20000"
     }]
   }, {
     "id": "e926ff6c-50c6-4ba8-8678-8b53f7492ad4",
@@ -1858,27 +1882,13 @@
       "id": "2a78cc2c-61ca-4892-8ffb-c5c9be0a549a",
       "comment": "",
       "command": "mouseOver",
-      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]",
       "targets": [
         ["css=.ag-cell-focus", "css:finder"],
         ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]", "xpath:idRelative"],
         ["xpath=//div[3]/div[2]/div/div/div/div[4]", "xpath:position"]
       ],
       "value": ""
-    }, {
-      "id": "32409d13-c2df-4213-b9e1-fc4d5b9216c1",
-      "comment": "",
-      "command": "waitForElementPresent",
-      "target": "xpath=//button[contains(.,'소재 검수')]",
-      "targets": [
-        ["id=397_modify_rev", "id"],
-        ["css=#\\33 97_modify_rev", "css:finder"],
-        ["xpath=//button[@id='397_modify_rev']", "xpath:attributes"],
-        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]/div/div/div/button[2]", "xpath:idRelative"],
-        ["xpath=//button[2]", "xpath:position"],
-        ["xpath=//button[contains(.,'소재 검수')]", "xpath:innerText"]
-      ],
-      "value": "5000"
     }, {
       "id": "d03924e4-2666-44ce-9457-c403bebd7d60",
       "comment": "",
