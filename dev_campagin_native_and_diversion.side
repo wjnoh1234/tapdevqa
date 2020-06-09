@@ -1418,7 +1418,7 @@
       "id": "266f34df-778d-45cf-9dde-70158ad80394",
       "comment": "",
       "command": "mouseOver",
-      "target": "css=.ag-cell-focus .ag-cell-campaign",
+      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div",
       "targets": [
         ["css=.ag-cell-focus .ag-cell-campaign", "css:finder"],
         ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div", "xpath:idRelative"],
@@ -1429,7 +1429,7 @@
       "id": "9c73ef30-f65f-490f-bd08-24c72475dfab",
       "comment": "",
       "command": "click",
-      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div/div/ul/button[2]",
+      "target": "xpath=//button[contains(.,'검수하기')]",
       "targets": [
         ["id=354_check_book", "id"],
         ["css=#\\33 54_check_book", "css:finder"],
