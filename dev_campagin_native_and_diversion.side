@@ -818,18 +818,18 @@
       "id": "5f56aaf7-5df8-4033-a5c7-460b60ad1e61",
       "comment": "",
       "command": "mouseOver",
-      "target": "css=.ag-cell-focus .ag-cell-campaign",
+      "target": "css=.camp-cell",
       "targets": [
-        ["css=.ag-cell-focus .ag-cell-campaign", "css:finder"],
-        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/div[3]/div/div", "xpath:position"]
+        ["css=.ag-cell-focus", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/div/div[3]", "xpath:position"]
       ],
       "value": ""
     }, {
       "id": "a3c3efaa-9051-4bf7-bf73-84db6826bdef",
       "comment": "",
       "command": "click",
-      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div/div/ul/button[2]",
+      "target": "xpath=//button[contains(.,'검수하기')]",
       "targets": [
         ["id=354_check_book", "id"],
         ["css=#\\33 54_check_book", "css:finder"],
@@ -1882,7 +1882,7 @@
       "id": "2a78cc2c-61ca-4892-8ffb-c5c9be0a549a",
       "comment": "",
       "command": "mouseOver",
-      "target": "xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]",
+      "target": "css=.group-cell",
       "targets": [
         ["css=.ag-cell-focus", "css:finder"],
         ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]", "xpath:idRelative"],

@@ -72,7 +72,7 @@
         ["xpath=//div[@id='tap-root']/div/div/filedset/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/dd/div/div/div/input", "xpath:position"]
       ],
-      "value": "shdnwn90"
+      "value": "nohwoojoo123"
     }, {
       "id": "c46cef88-f111-4684-bd07-4f869400dda8",
       "comment": "",
@@ -172,7 +172,7 @@
         ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[2]/div/dd/div/div/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "shdnwn90"
+      "value": "nohwoojoo123"
     }, {
       "id": "8a413143-2b46-4e98-9025-ebd09f06d6a2",
       "comment": "",
@@ -185,7 +185,7 @@
         ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[3]/div/dd/div/div/div/input", "xpath:idRelative"],
         ["xpath=//div[3]/div/dd/div/div/div/input", "xpath:position"]
       ],
-      "value": "shdnwn90"
+      "value": "nohwoojoo123"
     }, {
       "id": "e0b0cd5a-9b03-4a5b-8089-35161999d40a",
       "comment": "",
@@ -198,7 +198,7 @@
         ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[4]/div/dd/div/div/div/input", "xpath:idRelative"],
         ["xpath=//div[4]/div/dd/div/div/div/input", "xpath:position"]
       ],
-      "value": "shdnwn90"
+      "value": "nohwoojoo123"
     }, {
       "id": "1e7d41a2-328c-46c4-9980-e3e15134f25a",
       "comment": "",
@@ -239,10 +239,17 @@
       ],
       "value": "연락처수정테스트"
     }, {
+      "id": "1c2d5e2c-82af-4764-8e32-bd793b5341d8",
+      "comment": "",
+      "command": "times",
+      "target": "2",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "676585d5-79e0-4b5c-ad71-b079f8c272b7",
       "comment": "",
       "command": "click",
-      "target": "css=label:nth-child(2)",
+      "target": "xpath=//label[contains(.,'동의')]",
       "targets": [
         ["css=label:nth-child(2)", "css:finder"],
         ["xpath=//div[@id='tap-root']/div/div/dl/dl/div[9]/div/dd/div/div/div/label", "xpath:idRelative"],
@@ -251,10 +258,17 @@
       ],
       "value": ""
     }, {
+      "id": "d43a40eb-837e-4149-986a-4c49f596b861",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "c8ba3b7e-26c1-4270-bfa4-b93ce11dd716",
       "comment": "",
       "command": "click",
-      "target": "css=.pc-buttons:nth-child(2)",
+      "target": "xpath=//button[contains(.,'수정하기')]",
       "targets": [
         ["css=.pc-buttons:nth-child(2)", "css:finder"],
         ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
@@ -264,33 +278,51 @@
       ],
       "value": ""
     }, {
-      "id": "937fdc7b-d214-46bf-9a1c-a3eb4671bfa8",
+      "id": "fc7cd53b-cfe5-45f7-88e8-07f8e7d42a2e",
       "comment": "",
-      "command": "click",
-      "target": "css=.service-logo",
-      "targets": [
-        ["linkText=Tiktok Agency Platform", "linkText"],
-        ["css=.service-logo", "css:finder"],
-        ["xpath=//a[contains(text(),'Tiktok Agency Platform')]", "xpath:link"],
-        ["xpath=//div[@id='tap-root']/header/div/h2/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/campaign')]", "xpath:href"],
-        ["xpath=//a", "xpath:position"],
-        ["xpath=//a[contains(.,'Tiktok Agency Platform')]", "xpath:innerText"]
-      ],
+      "command": "storeText",
+      "target": "css=.Toastify__toast-body",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "b0d4ea8d-25fe-4b5f-86c8-81f4c55f468c",
+      "comment": "",
+      "command": "store",
+      "target": "저장에 성공하였습니다.",
+      "targets": [],
+      "value": "j"
+    }, {
+      "id": "32d10f30-0b0c-45eb-99b5-5cf1d47117b5",
+      "comment": "",
+      "command": "echo",
+      "target": "${i}",
+      "targets": [],
       "value": ""
     }, {
-      "id": "a0e9da6b-0d9f-47d6-b3e5-294b4ec55227",
+      "id": "faadb807-c22a-4640-a843-4901f6d47fe8",
       "comment": "",
-      "command": "waitForElementPresent",
-      "target": "xpath=//button[contains(.,'+ 새로운 캠페인')]",
+      "command": "echo",
+      "target": "${j}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e75a400a-350e-4dd7-af3b-2f5b157369fa",
+      "comment": "",
+      "command": "if",
+      "target": "${i} == ${j}",
       "targets": [
-        ["css=.pc-buttons", "css:finder"],
-        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
-        ["xpath=//div[@id='tap-root']/div/div[2]/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'+ 새로운 캠페인')]", "xpath:innerText"]
+        ["css=.Toastify__toast-body", "css:finder"],
+        ["xpath=//div[@id='pion-toaster']/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
       ],
-      "value": "10000"
+      "value": "true"
+    }, {
+      "id": "c4e8f4cf-b6ac-4dee-9065-5779a67a2fa6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "d1fd2118-cc14-4ac5-a5aa-fc3b51ad2bb1",
@@ -379,7 +411,7 @@
         ["xpath=//div[@id='pion-modal-0']/aside/div[2]/div/fieldset/dl/div/div/dd/div/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "광고주추가테스트"
+      "value": "0.광고주추가테스트"
     }, {
       "id": "d92bee08-8ec6-43aa-86f2-4fc086a65d8d",
       "comment": "",
@@ -417,10 +449,22 @@
       ],
       "value": ""
     }, {
+      "id": "c26f511f-5601-4b23-a87b-c42bbdf48ea6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//strong[contains(.,'광고주추가테스트')]",
+      "targets": [
+        ["css=li:nth-child(1) .name", "css:finder"],
+        ["xpath=//div[@id='tap-root']/div/div[2]/ul/li/div/strong", "xpath:idRelative"],
+        ["xpath=//div/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'광고주추가테스트')]", "xpath:innerText"]
+      ],
+      "value": "20000"
+    }, {
       "id": "bc2c52af-92d8-4394-a87c-1e4c072d2339",
       "comment": "",
       "command": "click",
-      "target": "xpath=//button[contains(.,'삭제')]",
+      "target": "css=li:nth-child(1) .pc-buttons",
       "targets": [
         ["css=li:nth-child(1) .pc-buttons", "css:finder"],
         ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],

@@ -701,7 +701,7 @@
       "id": "5f56aaf7-5df8-4033-a5c7-460b60ad1e61",
       "comment": "",
       "command": "mouseOver",
-      "target": "css=.ag-cell-focus .ag-cell-campaign",
+      "target": "css=.camp-cell",
       "targets": [
         ["css=.ag-cell-focus .ag-cell-campaign", "css:finder"],
         ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div", "xpath:idRelative"],
@@ -1301,7 +1301,7 @@
       "id": "266f34df-778d-45cf-9dde-70158ad80394",
       "comment": "",
       "command": "mouseOver",
-      "target": "css=.ag-cell-focus .ag-cell-campaign",
+      "target": "css=.camp-cell",
       "targets": [
         ["css=.ag-cell-focus .ag-cell-campaign", "css:finder"],
         ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[3]/div/div", "xpath:idRelative"],
@@ -1766,7 +1766,7 @@
       "id": "2a78cc2c-61ca-4892-8ffb-c5c9be0a549a",
       "comment": "",
       "command": "mouseOver",
-      "target": "xpath=//div[3]/div[2]/div/div/div/div[3]",
+      "target": "css=.group-cell",
       "targets": [
         ["css=.ag-cell-focus", "css:finder"],
         ["xpath=//div[@id='tap-root']/div/div[2]/div[3]/div/div/div[2]/div/div[3]/div[2]/div/div/div/div[4]", "xpath:idRelative"],
